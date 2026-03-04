@@ -66,7 +66,12 @@ app = FastAPI(title="AI Doctor Backend")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://localhost:3000",
+        "https://*.vercel.app",
+        "*"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -584,3 +589,10 @@ def _process_user_pdf(temp_path, user_id, filename):
     finally:
         if os.path.exists(temp_path):
             os.remove(temp_path)
+
+
+# ── Entry Point ────────────────────────────────────────────────────────────────
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
