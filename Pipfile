@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+speechrecognition = "*"
+pyaudio = "*"
+pydub = "*"
+groq = "*"
+pipwin = "*"
+js2py = "==0.74"
+googletrans = "*"
+gradio = "*"
+python-dotenv = "*"
+langdetect = "*"
+gtts = "*"
+elevenlabs = "*"
+fpdf = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"

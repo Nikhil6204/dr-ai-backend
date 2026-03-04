@@ -1,0 +1,49 @@
+# Environment variables - NEVER commit these
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.pyc
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# ChromaDB local data
+chroma_db/
+*.db
+*.sqlite
+
+# Temp files created by app
+temp_*
+*.tmp
+
+# Virtual environments
+Pipfile.lock
+.pipenv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Large model files
+*.bin
+*.pt
+*.safetensors
+models/
